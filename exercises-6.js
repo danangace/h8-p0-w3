@@ -1,24 +1,22 @@
 function angkaPalindrome(num){
-  var angPal = num.toString(); // "117"
+  var angPal = num.toString();
   var angPalBaru = '';
 
-  while (angPal !== angPalBaru){ // "117" !== ""
+  while (angPal !== angPalBaru){
+
     var angPalBaru = '';
     var angPal = num.toString();
-    for(i = angPal.length-1; i >=0; i--){
+    
+    for(var i = angPal.length-1; i >=0; i--){
       angPalBaru += angPal[i];
     }
-    if ( angPal === angPalBaru){ // "117" === "711"
+    if ( angPal === angPalBaru){
       return num;
     } else {
       num++;
-      // 118
     }
   }
 }
-    
-
-
   
   // TEST CASES
   console.log(angkaPalindrome(8)); // 9
