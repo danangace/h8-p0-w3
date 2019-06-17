@@ -8,7 +8,8 @@ function pasanganTerbesar(num) {
     }
     pasanganAngka.pop();
     pasanganAngka.sort(function(a,z){ return (z-a)})
-    return pasanganAngka[0];
+
+    return Number(pasanganAngka[0]);
   }
   
   // TEST CASES

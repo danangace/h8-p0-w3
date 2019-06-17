@@ -13,8 +13,8 @@ function groupAnimals(animals) {
                 animals.splice(j,1);
               }
             }
-            res.push(hewan);
-            newAnimals.push(res)  
+            hewan = hewan.split(', ');
+            newAnimals.push(hewan)  
             newAnimals.sort()            
         }
         return newAnimals;                    

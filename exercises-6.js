@@ -2,13 +2,13 @@ function angkaPalindrome(num){
   var angPal = num.toString();
   var angPalBaru = '';
 
-  while (angPal !== angPalBaru){
+  while (angPal !== angPalBaru){ // 8 !== ''
 
     var angPalBaru = '';
     var angPal = num.toString();
     
     for(var i = angPal.length-1; i >=0; i--){
-      angPalBaru += angPal[i];
+      angPalBaru += angPal[i];        
     }
     if ( angPal === angPalBaru){
       return num;
