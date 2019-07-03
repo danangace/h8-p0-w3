@@ -1,19 +1,15 @@
 function angkaPalindrome(num){
-  var angPal = num.toString();
-  var angPalBaru = '';
+  for(var i = num+1; !palindrome; i++) {
+    var palindrome = true;
+    var angka = "" + i;
 
-  while (angPal !== angPalBaru){ // 8 !== ''
-
-    var angPalBaru = '';
-    var angPal = num.toString();
-    
-    for(var i = angPal.length-1; i >=0; i--){
-      angPalBaru += angPal[i];        
+    for(var j = 0; j < angka.length / 2; j++) {
+        if(angka[j] !== angka[angka.length-1-j]) {
+            palindrome = false;
+        }
     }
-    if ( angPal === angPalBaru){
-      return num;
-    } else {
-      num++;
+    if(palindrome) {
+        return i;
     }
   }
 }

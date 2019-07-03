@@ -1,22 +1,24 @@
 function mengelompokkanAngka(arr) {
     // you can only write your code here!
+    var kelompokAngka = [];
     var odd = [];
     var even = [];
-    var threeMultiplying = [];
-    var kelompokAngka = [];
+    var multiply3 = [];
 
-    for(i = 0; i < arr.length; i++){
-      if ( arr[i] % 2 === 0 && arr[i] % 3 !== 0 ){
-        odd.push(arr[i]);
-      } if ( arr[i] % 2 !== 0 && arr[i] % 3 !== 0 ){
-        even.push(arr[i]);
-      } if ( arr[i] % 3 === 0 ){
-        threeMultiplying.push(arr[i]);
-      }
-      kelompokAngka[0] = odd;
-      kelompokAngka[1] = even;
-      kelompokAngka[2] = threeMultiplying;
-    }   
+    for(var i = 0; i < arr.length; i++) {
+        if(arr[i] % 3 === 0) {
+            multiply3.push(arr[i]);
+        } else if(arr[i] % 2 === 0) {
+            odd.push(arr[i]);
+        } else {
+            even.push(arr[i]);
+        }
+    }
+
+    kelompokAngka[0] = odd;
+    kelompokAngka[1] = even;
+    kelompokAngka[2] = multiply3;
+
     return kelompokAngka;
   }
   
